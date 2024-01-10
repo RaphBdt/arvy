@@ -1,5 +1,5 @@
 <template>
-<div class="flex min-h-full">
+<div class="flex h-screen">
   <div class="flex flex-1 flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
     <div class="mx-auto w-full max-w-sm lg:w-96">
       <div>
@@ -82,6 +82,6 @@
     })
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 
 </style>
