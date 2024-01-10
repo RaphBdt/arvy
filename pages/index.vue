@@ -89,6 +89,10 @@
 
 <script setup>
     const mobileMenuOpen = ref(false);
+
+    useHead({
+        title: 'Arvy | Votre meilleur partenaire CrossFit'
+    })
 </script>
 
 <style scoped>
