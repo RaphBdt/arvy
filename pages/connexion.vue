@@ -11,7 +11,7 @@
             </svg>
           </div>
           <div class="ml-3">
-            <h3 class="text-sm font-medium text-red-800">Identifiant ou mot de passe incorrect</h3>
+            <h3 class="text-sm font-medium text-red-800">{{ error }}</h3>
           </div>
         </div>
       </div>
@@ -27,7 +27,7 @@
 
       <div class="mt-10">
         <div>
-          <form action="#" method="POST" class="space-y-6">
+          <form class="space-y-6">
             <div>
               <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email</label>
               <div class="mt-2">
@@ -93,8 +93,8 @@
 <script setup>
     const login = defineModel('login')
     const password = defineModel('password')
-    let token = null
-    let error = null
+    let token = ref(null)
+    let error = ref(null)
 
     useHead({
       title: 'Arvy | Connexion'
@@ -114,18 +114,15 @@
         })
 
         if (responseData && responseData.value && responseData.value.token) {
-          token = responseData.value.token
-          error = null
+          localStorage.setItem("token", responseData.value.token);
+          error.value = null
         } else {
-          token = null
-          error = "Erreur d'authentification. Vérifiez vos informations de connexion."
+          token.value = null
+          error.value = "Erreur d'authentification. Vérifiez vos informations de connexion."
         }
 
-        console.log(token)
-        console.log(error)
       } catch (error) {
-        error = "Une erreur s'est produite lors de la tentative d'authentification."
-        console.error(error)
+        error.value = "Une erreur s'est produite lors de la tentative d'authentification."
       }
     }
 </script>
