@@ -58,10 +58,15 @@
 
     let currentStep = ref(0);
 
-    function changeStep() {
+    async function changeStep() {
         steps.value[currentStep.value].status = "complete";
         currentStep.value = currentStep.value + 1;
         steps.value[currentStep.value].status = "current";
+
+        // Temporary code
+        if (currentStep.value == 3) {
+            await navigateTo('/tableau-de-bord');
+        }
     }
 </script>
 

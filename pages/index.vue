@@ -74,7 +74,7 @@
                     <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Enfin une app à la hauteur de vos performances</h1>
                     <p class="mt-6 text-lg leading-8 text-gray-300">Créez des modèles de WOD, enregistrez vos performances, partagez vos résultats et décrochez des trophées. Bienvenue sur votre nouvelle application de CrossFit tout-en-un. Conçue aussi bien pour les athlètes que pour les gérants de box.</p>
                     <div class="mt-10 flex items-center justify-center gap-x-6">
-                    <a href="#" class="rounded-md bg-violet-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-violet-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-400">Inscription</a>
+                    <NuxtLink to="/inscription" class="rounded-md bg-violet-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-violet-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-400">Inscription</NuxtLink>
                     <NuxtLink to="/connexion" class="text-sm font-semibold leading-6 text-white">Connexion <span aria-hidden="true">→</span></NuxtLink>
                     </div>
                 </div>

@@ -274,6 +274,20 @@
 </template>
 
 <script setup>
+onMounted(() => {
+    getUser();
+})
+
+async function getUser() {
+    let token = localStorage.getItem("token");
+    const { data: responseData } = await useFetch('https://main-bvxea6i-axul4nh3q5odm.fr-3.platformsh.site/api/profile', {
+        method: 'get',
+        headers: {
+            "Authorization": `Bearer ${token}`,
+        }
+    })
+    console.log(responseData.value);
+}
 
 </script>
 

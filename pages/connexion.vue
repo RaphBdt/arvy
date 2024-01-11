@@ -21,7 +21,7 @@
         <h2 class="mt-8 text-2xl font-bold leading-9 tracking-tight text-gray-900">Connexion à votre compte Arvy</h2>
         <p class="mt-2 text-sm leading-6 text-gray-500">
           Pas encore inscrit ?
-          <a href="#" class="font-semibold text-violet-600 hover:text-violet-500">Rejoignez Arvy dès maintenant</a>
+          <NuxtLink to="/inscription" class="font-semibold text-violet-600 hover:text-violet-500">Rejoignez Arvy dès maintenant</NuxtLink>
         </p>
       </div>
 
@@ -107,7 +107,7 @@
             headers: {
               "Content-Type": "application/json",
             },
-            body: { 
+            body: {
               "email": login,
               "password": password
             }
