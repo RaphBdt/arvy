@@ -23,7 +23,7 @@
                     <a href="#" class="text-sm font-semibold leading-6 text-white">Roadmap</a>
                 </div>
                 <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <a href="#" class="text-sm font-semibold leading-6 text-white">Connexion <span aria-hidden="true">&rarr;</span></a>
+                    <NuxtLink to="/connexion" class="text-sm font-semibold leading-6 text-white">Connexion <span aria-hidden="true">&rarr;</span></NuxtLink>
                 </div>
                 </nav>
                 <!-- Mobile menu, show/hide based on menu open state. -->
@@ -51,7 +51,7 @@
                                     <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Roadmap</a>
                                 </div>
                                 <div class="py-6">
-                                <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-800">Connexion</a>
+                                <NuxtLink to="/connexion" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-800">Connexion</NuxtLink>
                                 </div>
                             </div>
                         </div>
@@ -75,7 +75,7 @@
                     <p class="mt-6 text-lg leading-8 text-gray-300">Créez des modèles de WOD, enregistrez vos performances, partagez vos résultats et décrochez des trophées. Bienvenue sur votre nouvelle application de CrossFit tout-en-un. Conçue aussi bien pour les athlètes que pour les gérants de box.</p>
                     <div class="mt-10 flex items-center justify-center gap-x-6">
                     <a href="#" class="rounded-md bg-violet-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-violet-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-400">Inscription</a>
-                    <a href="#" class="text-sm font-semibold leading-6 text-white">Connexion <span aria-hidden="true">→</span></a>
+                    <NuxtLink to="/connexion" class="text-sm font-semibold leading-6 text-white">Connexion <span aria-hidden="true">→</span></NuxtLink>
                     </div>
                 </div>
                 </div>
