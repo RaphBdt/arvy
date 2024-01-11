@@ -40,23 +40,29 @@
         </nav>
 
         <div class="flex justify-center items-center my-14 lg:my-28">
-            <RegistrationStepOne v-if="currentStep == 0" />
-            <RegistrationStepTwo v-else-if="currentStep == 1" />
-            <RegistrationStepThree v-else-if="currentStep == 2" />
+            <RegistrationStepOne @change-step-event="changeStep" v-if="currentStep == 0" />
+            <RegistrationStepTwo @change-step-event="changeStep" v-else-if="currentStep == 1" />
+            <RegistrationStepThree @change-step-event="changeStep" v-else-if="currentStep == 2" />
             <RegistrationStepFour v-else-if="currentStep == 3" />
         </div>
     </div>
 </template>
 
 <script setup>
-    let steps = [
-        { id: '01', name: 'Compte', href: '#', status: 'complete' },
-        { id: '02', name: 'Informations', href: '#', status: 'current' },
+    let steps = ref([
+        { id: '01', name: 'Compte', href: '#', status: 'current' },
+        { id: '02', name: 'Informations', href: '#', status: 'upcoming' },
         { id: '03', name: 'Box', href: '#', status: 'upcoming' },
         { id: '04', name: 'Résumé', href: '#', status: 'upcoming' },
-    ]
+    ])
 
-    let currentStep = 3;
+    let currentStep = ref(0);
+
+    function changeStep() {
+        steps.value[currentStep.value].status = "complete";
+        currentStep.value = currentStep.value + 1;
+        steps.value[currentStep.value].status = "current";
+    }
 </script>
 
 <style scoped>

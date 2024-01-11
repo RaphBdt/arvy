@@ -44,7 +44,7 @@
             </div>
         </div>
 
-        <PrimaryButton class="mt-10" name="Continuer" />
+        <PrimaryButton @click="$emit('changeStepEvent')" class="mt-10" name="Continuer" />
     </div>
 </template>
 
