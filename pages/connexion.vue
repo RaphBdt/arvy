@@ -17,14 +17,14 @@
             <div>
               <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email</label>
               <div class="mt-2">
-                <input id="email" name="email" type="email" autocomplete="email" required class="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-600 sm:text-sm sm:leading-6">
+                <input v-model="login" id="email" name="email" type="email" autocomplete="email" required class="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-600 sm:text-sm sm:leading-6">
               </div>
             </div>
 
             <div>
               <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Mot de passe</label>
               <div class="mt-2">
-                <input id="password" name="password" type="password" autocomplete="current-password" required class="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-600 sm:text-sm sm:leading-6">
+                <input v-model="password" id="password" name="password" type="password" autocomplete="current-password" required class="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-600 sm:text-sm sm:leading-6">
               </div>
             </div>
 
@@ -40,7 +40,7 @@
             </div>
 
             <div>
-              <button type="submit" class="flex w-full justify-center rounded-md bg-violet-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-violet-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600">Connexion</button>
+              <button @click="auth" type="button" class="flex w-full justify-center rounded-md bg-violet-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-violet-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600">Connexion</button>
             </div>
           </form>
         </div>
@@ -77,9 +77,43 @@
 </template>
 
 <script setup>
+    const login = defineModel('login')
+    const password = defineModel('password')
+    let token = null
+    let error = null
+
     useHead({
-        title: 'Arvy | Connexion'
+      title: 'Arvy | Connexion'
     })
+
+    async function auth() {
+      try {
+        const { data: responseData } = await useFetch('https://main-bvxea6i-axul4nh3q5odm.fr-3.platformsh.site/api/login', {
+            method: 'post',
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: { 
+              "email": login,
+              "password": password
+            }
+        })
+
+        if (responseData && responseData.value && responseData.value.token) {
+          token = responseData.value.token
+          error = null
+        } else {
+          token = null
+          error = "Erreur d'authentification. Vérifiez vos informations de connexion."
+        }
+
+        console.log(token)
+        console.log(error)
+      } catch (error) {
+        error = "Une erreur s'est produite lors de la tentative d'authentification."
+        console.error(error)
+      }
+    }
 </script>
 
 <style scoped>
