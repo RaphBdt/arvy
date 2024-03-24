@@ -1,8 +1,8 @@
 <template>
-    <div>
+    <div class="bg-white">
         <h2 class="text-center text-2xl">{{ title }}</h2>
         <p class="text-center text-gray-600">{{ description }}</p>
-        <hr class="my-8">
+        <hr class="my-6">
     </div>
 </template>
 

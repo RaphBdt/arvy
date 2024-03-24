@@ -6,8 +6,8 @@
 
         <RegistrationStepTitle title="Vos informations" description="Inscrivez-vous sur Arvy !" />
 
-        <div class="border-b border-gray-900/10 pb-6">
-            <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-6">
+        <div class="pb-6">
+            <div class="grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-6">
                 <div class="sm:col-span-3">
                     <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">Prénom*</label>
                     <div class="mt-2">
@@ -56,7 +56,7 @@
 </template>
 
 <script setup>
-const emit = defineEmits(['changeStepEvent'])
+const emit = defineEmits(['changeStepEvent', 'updateRegistrationEvent'])
 
 const email = defineModel('email')
 const username = defineModel('username')
@@ -68,22 +68,24 @@ let errorMessage = ref(null)
 
 async function clickBtnNext() {
     if (email.value && username.value && firstName.value && lastName.value && password.value) {
+        const user = {
+            "email": email.value,
+            "username": username.value,
+            "firstName": firstName.value,
+            "lastName": lastName.value,
+            "password": password.value
+        }
+
         await useFetch('https://main-bvxea6i-axul4nh3q5odm.fr-3.platformsh.site/api/register', {
             method: 'post',
             headers: {
                 "Content-Type": "application/json",
             },
-            body: {
-                "email": email.value,
-                "username": username.value,
-                "firstName": firstName.value,
-                "lastName": lastName.value,
-                "password": password.value
-            },
+            body: user,
             onResponse({ response }) {
                 if (response.status === 200) {
-                    console.log(response)
                     errorMessage.value = null
+                    emit('updateRegistrationEvent', user)
                     emit('changeStepEvent')
                 } else {
                     errorMessage.value = "Erreur lors de l'inscription. Votre nom d'utilisateur et votre adresse mail doivent être uniques sur l'application."
@@ -91,7 +93,7 @@ async function clickBtnNext() {
             }
         })
     } else {
-        errorMessage.value = "Merci de remplir tous les champs."
+        errorMessage.value = "Merci de remplir tous les champs obligatoires."
     }
 }
 </script>

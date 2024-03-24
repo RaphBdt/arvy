@@ -24,7 +24,7 @@
                     </div>
                 </RadioGroupOption>
             </div>
-            <Button class="w-full" name="Continuer" color="violet" @click="$emit('changeStepEvent')" />
+            <Button class="w-full" name="Continuer" color="violet" @click="clickBtnNext()" />
         </div>
     </RadioGroup>
 </template>
@@ -33,12 +33,19 @@
 import { ref } from 'vue'
 import { RadioGroup, RadioGroupDescription, RadioGroupLabel, RadioGroupOption } from '@headlessui/vue'
 
+const emit = defineEmits(['changeStepEvent', 'updateRegistrationEvent'])
+
 const settings = [
     { name: 'Je suis CrossFiteur 💪', description: 'Je suis pratiquant de CrossFit dans une box affiliée ou du cross training' },
     { name: 'Je suis gérant ou coach 💼', description: 'Je suis gérant ou coach d\'une box et je souhaite découvrir Arvy' },
 ]
 
 const selected = ref(settings[0])
+
+function clickBtnNext() {
+    emit('updateRegistrationEvent', { type: selected.value.name })
+    emit('changeStepEvent')
+}
 </script>
 
 <style scoped></style>
