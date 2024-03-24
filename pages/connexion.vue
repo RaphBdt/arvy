@@ -124,6 +124,7 @@ async function clickAuth() {
         if (response.status === 200) {
           localStorage.setItem("token", response._data.token);
           errorMessage.value = null
+          navigateTo('/tableau-de-bord')
         } else {
           errorMessage.value = "Erreur d'authentification. Vérifiez vos informations de connexion."
         }
