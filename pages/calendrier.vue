@@ -2,7 +2,7 @@
 <div class="flex h-full flex-col">
   <header class="flex flex-none items-center justify-between border-b border-gray-200 px-6 py-4">
     <h1 class="text-base font-semibold leading-6 text-gray-900">
-      <time datetime="2022-01">Janvier 2024</time>
+      <time datetime="2022-01">Avril 2024</time>
     </h1>
     <div class="flex items-center">
       <div class="relative flex items-center rounded-md bg-white shadow-sm md:items-stretch">
@@ -42,7 +42,7 @@
           
           <div class="absolute right-0 z-10 mt-3 w-36 origin-top-right overflow-hidden rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
             <div class="py-1" role="none">
-              <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" 
+              Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" 
               <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Day view</a>
               <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Week view</a>
               <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Month view</a>
@@ -80,25 +80,25 @@
         <div class="-mr-px hidden grid-cols-7 divide-x divide-gray-100 border-r border-gray-100 text-sm leading-6 text-gray-500 sm:grid">
           <div class="col-end-1 w-14"></div>
           <div class="flex items-center justify-center py-3">
-            <span>Lun <span class="items-center justify-center font-semibold text-gray-900">08</span></span>
+            <span>Lun <span class="items-center justify-center font-semibold text-gray-900">04</span></span>
           </div>
           <div class="flex items-center justify-center py-3">
-            <span>Mar <span class="items-center justify-center font-semibold text-gray-900">09</span></span>
+            <span>Mar <span class="items-center justify-center font-semibold text-gray-900">05</span></span>
           </div>
           <div class="flex items-center justify-center py-3">
-            <span>Jeu <span class="items-center justify-center font-semibold text-gray-900">10</span></span>
+            <span>Jeu <span class="items-center justify-center font-semibold text-gray-900">06</span></span>
           </div>
           <div class="flex items-center justify-center py-3">
-            <span>Jeu <span class="items-center justify-center font-semibold text-gray-900">11</span></span>
+            <span>Jeu <span class="items-center justify-center font-semibold text-gray-900">07</span></span>
           </div>
           <div class="flex items-center justify-center py-3">
-            <span class="flex items-baseline">Ven <span class="ml-1.5 flex h-8 w-8 items-center justify-center rounded-full bg-violet-600 font-semibold text-white">12</span></span>
+            <span class="flex items-baseline">Ven <span class="ml-1.5 flex h-8 w-8 items-center justify-center rounded-full bg-violet-600 font-semibold text-white">08</span></span>
           </div>
           <div class="flex items-center justify-center py-3">
-            <span>Sam <span class="items-center justify-center font-semibold text-gray-900">13</span></span>
+            <span>Sam <span class="items-center justify-center font-semibold text-gray-900">09</span></span>
           </div>
           <div class="flex items-center justify-center py-3">
-            <span>Dim <span class="items-center justify-center font-semibold text-gray-900">14</span></span>
+            <span>Dim <span class="items-center justify-center font-semibold text-gray-900">10</span></span>
           </div>
         </div>
       </div>
@@ -106,32 +106,8 @@
         <div class="sticky left-0 z-10 w-14 flex-none bg-white ring-1 ring-gray-100"></div>
         <div class="grid flex-auto grid-cols-1 grid-rows-1">
           <!-- Horizontal lines -->
-          <div class="col-start-1 col-end-2 row-start-1 grid divide-y divide-gray-100" style="grid-template-rows: repeat(48, minmax(3.5rem, 1fr))">
+          <div class="col-start-1 col-end-2 row-start-1 grid divide-y divide-gray-100" style="grid-template-rows: repeat(32, minmax(3.5rem, 1fr))">
             <div class="row-end-1 h-7"></div>
-            <div>
-              <div class="sticky left-0 z-20 -ml-14 -mt-2.5 w-14 pr-2 text-right text-xs leading-5 text-gray-400">00h</div>
-            </div>
-            <div></div>
-            <div>
-              <div class="sticky left-0 z-20 -ml-14 -mt-2.5 w-14 pr-2 text-right text-xs leading-5 text-gray-400">1h</div>
-            </div>
-            <div></div>
-            <div>
-              <div class="sticky left-0 z-20 -ml-14 -mt-2.5 w-14 pr-2 text-right text-xs leading-5 text-gray-400">2h</div>
-            </div>
-            <div></div>
-            <div>
-              <div class="sticky left-0 z-20 -ml-14 -mt-2.5 w-14 pr-2 text-right text-xs leading-5 text-gray-400">3h</div>
-            </div>
-            <div></div>
-            <div>
-              <div class="sticky left-0 z-20 -ml-14 -mt-2.5 w-14 pr-2 text-right text-xs leading-5 text-gray-400">4h</div>
-            </div>
-            <div></div>
-            <div>
-              <div class="sticky left-0 z-20 -ml-14 -mt-2.5 w-14 pr-2 text-right text-xs leading-5 text-gray-400">5h</div>
-            </div>
-            <div></div>
             <div>
               <div class="sticky left-0 z-20 -ml-14 -mt-2.5 w-14 pr-2 text-right text-xs leading-5 text-gray-400">6h</div>
             </div>
@@ -196,14 +172,6 @@
               <div class="sticky left-0 z-20 -ml-14 -mt-2.5 w-14 pr-2 text-right text-xs leading-5 text-gray-400">21h</div>
             </div>
             <div></div>
-            <div>
-              <div class="sticky left-0 z-20 -ml-14 -mt-2.5 w-14 pr-2 text-right text-xs leading-5 text-gray-400">22h</div>
-            </div>
-            <div></div>
-            <div>
-              <div class="sticky left-0 z-20 -ml-14 -mt-2.5 w-14 pr-2 text-right text-xs leading-5 text-gray-400">23h</div>
-            </div>
-            <div></div>
           </div>
 
           <!-- Vertical lines -->
@@ -220,22 +188,91 @@
 
           <!-- Events -->
           <ol class="col-start-1 col-end-2 row-start-1 grid grid-cols-1 sm:grid-cols-7 sm:pr-8" style="grid-template-rows: 1.75rem repeat(288, minmax(0, 1fr)) auto">
-            <li class="relative mt-px flex sm:col-start-3" style="grid-row: 74 / span 12">
+            <!-- Monday -->
+            <li class="relative mt-px flex sm:col-start-1" style="grid-row: 2 / span 18">
               <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-blue-50 p-2 text-xs leading-5 hover:bg-blue-100">
                 <p class="order-1 font-semibold text-blue-700">WOD</p>
                 <p class="text-blue-500 group-hover:text-blue-700"><time datetime="2022-01-12T06:00">6h</time></p>
               </a>
             </li>
-            <li class="relative mt-px flex sm:col-start-3" style="grid-row: 92 / span 30">
-              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-pink-50 p-2 text-xs leading-5 hover:bg-pink-100">
-                <p class="order-1 font-semibold text-pink-700">WOD Team</p>
-                <p class="text-pink-500 group-hover:text-pink-700"><time datetime="2022-01-12T07:30">7h30</time></p>
+            <li class="relative mt-px flex sm:col-start-1" style="grid-row: 20 / span 18">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-blue-50 p-2 text-xs leading-5 hover:bg-blue-100">
+                <p class="order-1 font-semibold text-blue-700">WOD</p>
+                <p class="text-blue-500 group-hover:text-blue-700"><time datetime="2022-01-12T06:00">7h</time></p>
               </a>
             </li>
-            <li class="relative mt-px hidden sm:col-start-6 sm:flex" style="grid-row: 122 / span 24">
+            <li class="relative mt-px flex sm:col-start-1" style="grid-row: 74 / span 18">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-blue-50 p-2 text-xs leading-5 hover:bg-blue-100">
+                <p class="order-1 font-semibold text-blue-700">WOD</p>
+                <p class="text-blue-500 group-hover:text-blue-700"><time datetime="2022-01-12T06:00">10h</time></p>
+              </a>
+            </li>
+            <li class="relative mt-px flex sm:col-start-1" style="grid-row: 110 / span 18">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-blue-50 p-2 text-xs leading-5 hover:bg-blue-100">
+                <p class="order-1 font-semibold text-blue-700">WOD</p>
+                <p class="text-blue-500 group-hover:text-blue-700"><time datetime="2022-01-12T06:00">12h</time></p>
+              </a>
+            </li>
+            <li class="relative mt-px flex sm:col-start-1" style="grid-row: 182 / span 27">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-pink-50 p-2 text-xs leading-5 hover:bg-pink-100">
+                <p class="order-1 font-semibold text-pink-700">WOD Team</p>
+                <p class="text-pink-500 group-hover:text-pink-700"><time datetime="2022-01-12T07:30">16h</time></p>
+              </a>
+            </li>
+            <li class="relative mt-px flex sm:col-start-1" style="grid-row: 218 / span 18">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-blue-50 p-2 text-xs leading-5 hover:bg-blue-100">
+                <p class="order-1 font-semibold text-blue-700">WOD</p>
+                <p class="text-blue-500 group-hover:text-blue-700"><time datetime="2022-01-12T06:00">18h</time></p>
+              </a>
+            </li>
+            <li class="relative mt-px flex sm:col-start-1" style="grid-row: 236 / span 18">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-blue-50 p-2 text-xs leading-5 hover:bg-blue-100">
+                <p class="order-1 font-semibold text-blue-700">WOD</p>
+                <p class="text-blue-500 group-hover:text-blue-700"><time datetime="2022-01-12T06:00">19h</time></p>
+              </a>
+            </li>
+            
+            <!-- Tuesday -->
+            <li class="relative mt-px flex sm:col-start-2" style="grid-row: 20 / span 18">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-blue-50 p-2 text-xs leading-5 hover:bg-blue-100">
+                <p class="order-1 font-semibold text-blue-700">WOD</p>
+                <p class="text-blue-500 group-hover:text-blue-700"><time datetime="2022-01-12T06:00">7h</time></p>
+              </a>
+            </li>
+            <li class="relative mt-px hidden sm:col-start-2 sm:flex" style="grid-row: 47 / span 18">
               <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-gray-100 p-2 text-xs leading-5 hover:bg-gray-200">
                 <p class="order-1 font-semibold text-gray-700">Renfo gym</p>
-                <p class="text-gray-500 group-hover:text-gray-700"><time datetime="2022-01-15T10:00">10h</time></p>
+                <p class="text-gray-500 group-hover:text-gray-700"><time datetime="2022-01-15T10:00">8h30</time></p>
+              </a>
+            </li>
+            <li class="relative mt-px flex sm:col-start-2" style="grid-row: 74 / span 18">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-blue-50 p-2 text-xs leading-5 hover:bg-blue-100">
+                <p class="order-1 font-semibold text-blue-700">WOD</p>
+                <p class="text-blue-500 group-hover:text-blue-700"><time datetime="2022-01-12T06:00">10h</time></p>
+              </a>
+            </li>
+            <li class="relative mt-px flex sm:col-start-2" style="grid-row: 110 / span 18">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-blue-50 p-2 text-xs leading-5 hover:bg-blue-100">
+                <p class="order-1 font-semibold text-blue-700">WOD</p>
+                <p class="text-blue-500 group-hover:text-blue-700"><time datetime="2022-01-12T06:00">12h</time></p>
+              </a>
+            </li>
+            <li class="relative mt-px flex sm:col-start-2" style="grid-row: 182 / span 27">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-pink-50 p-2 text-xs leading-5 hover:bg-pink-100">
+                <p class="order-1 font-semibold text-pink-700">WOD Team</p>
+                <p class="text-pink-500 group-hover:text-pink-700"><time datetime="2022-01-12T07:30">16h</time></p>
+              </a>
+            </li>
+            <li class="relative mt-px flex sm:col-start-2" style="grid-row: 218 / span 18">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-blue-50 p-2 text-xs leading-5 hover:bg-blue-100">
+                <p class="order-1 font-semibold text-blue-700">WOD</p>
+                <p class="text-blue-500 group-hover:text-blue-700"><time datetime="2022-01-12T06:00">18h</time></p>
+              </a>
+            </li>
+            <li class="relative mt-px flex sm:col-start-2" style="grid-row: 236 / span 18">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-blue-50 p-2 text-xs leading-5 hover:bg-blue-100">
+                <p class="order-1 font-semibold text-blue-700">WOD</p>
+                <p class="text-blue-500 group-hover:text-blue-700"><time datetime="2022-01-12T06:00">19h</time></p>
               </a>
             </li>
           </ol>
