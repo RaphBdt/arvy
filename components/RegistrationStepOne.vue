@@ -1,52 +1,44 @@
 <template>
-    <div class="lg:w-1/2 w-full">
-        <h1 class="text-center text-xl mb-6">Type de compte</h1>
-        <fieldset>
-            <legend class="sr-only">Server size</legend>
-            <div class="space-y-4">
-                <!-- Active: "border-violet-600 ring-2 ring-violet-600", Not Active: "border-gray-300" -->
-                <label @click="$emit('changeStepEvent')" class="relative block cursor-pointer rounded-lg border bg-white px-6 py-4 shadow-sm focus:outline-none sm:flex sm:justify-between hover:border-violet-600 hover:ring-2 hover:ring-violet-600">
-                    <input type="radio" name="server-size" value="Hobby" class="sr-only" aria-labelledby="server-size-0-label" aria-describedby="server-size-0-description-0 server-size-0-description-1">
-                    <span class="flex items-center">
-                        <span class="flex flex-col text-sm">
-                        <span id="server-size-0-label" class="font-medium text-gray-900">Je suis un athlète</span>
-                        <span id="server-size-0-description-0" class="text-gray-500">
-                            <span class="block sm:inline">Je fais du CrossFit dans une box ou en loisir</span>
+    <RadioGroup v-model="selected">
+        <RegistrationStepTitle title="Type de compte" description="Choisissez un type de compte" />
+        <RadioGroupLabel class="sr-only">Privacy setting</RadioGroupLabel>
+        <div class="-space-y-px rounded-md bg-white">
+            <div class="mb-5">
+                <RadioGroupOption as="template" v-for="(setting, settingIdx) in settings" :key="setting.name"
+                    :value="setting" v-slot="{ checked, active }">
+                    <div
+                        :class="[settingIdx === 0 ? 'rounded-tl-md rounded-tr-md' : '', settingIdx === settings.length - 1 ? 'rounded-bl-md rounded-br-md' : '', checked ? 'z-10 border-indigo-200 bg-indigo-50' : 'border-gray-200', 'relative flex cursor-pointer border p-4 focus:outline-none']">
+                        <span
+                            :class="[checked ? 'bg-indigo-600 border-transparent' : 'bg-white border-gray-300', active ? 'ring-2 ring-offset-2 ring-indigo-600' : '', 'mt-0.5 h-4 w-4 shrink-0 cursor-pointer rounded-full border flex items-center justify-center']"
+                            aria-hidden="true">
+                            <span class="rounded-full bg-white w-1.5 h-1.5" />
                         </span>
+                        <span class="ml-3 flex flex-col">
+                            <RadioGroupLabel as="span"
+                                :class="[checked ? 'text-indigo-900' : 'text-gray-900', 'block text-sm font-medium']">{{
+        setting.name }}</RadioGroupLabel>
+                            <RadioGroupDescription as="span"
+                                :class="[checked ? 'text-indigo-700' : 'text-gray-500', 'block text-sm']">{{
+        setting.description }}</RadioGroupDescription>
                         </span>
-                    </span>
-                    <!--
-                        Active: "border", Not Active: "border-2"
-                        Checked: "border-violet-600", Not Checked: "border-transparent"
-                    -->
-                    <span class="pointer-events-none absolute -inset-px rounded-lg border-2" aria-hidden="true"></span>
-                </label>
-                <!-- Active: "border-violet-600 ring-2 ring-violet-600", Not Active: "border-gray-300" -->
-                <label @click="$emit('changeStepEvent')" class="relative block cursor-pointer rounded-lg border bg-white px-6 py-4 shadow-sm focus:outline-none sm:flex sm:justify-between hover:border-violet-600 hover:ring-2 hover:ring-violet-600">
-                    <input type="radio" name="server-size" value="Startup" class="sr-only" aria-labelledby="server-size-1-label" aria-describedby="server-size-1-description-0 server-size-1-description-1">
-                    <span class="flex items-center">
-                        <span class="flex flex-col text-sm">
-                        <span id="server-size-1-label" class="font-medium text-gray-900">Je suis gérant de box</span>
-                        <span id="server-size-1-description-0" class="text-gray-500">
-                            <span class="block sm:inline">Je suis le patron d'une box de CrossFit affiliée</span>
-                        </span>
-                        </span>
-                    </span>
-                    <!--
-                        Active: "border", Not Active: "border-2"
-                        Checked: "border-violet-600", Not Checked: "border-transparent"
-                    -->
-                    <span class="pointer-events-none absolute -inset-px rounded-lg border-2" aria-hidden="true"></span>
-                </label>
+                    </div>
+                </RadioGroupOption>
             </div>
-        </fieldset>
-    </div>
+            <Button class="w-full" name="Continuer" color="violet" @click="$emit('changeStepEvent')" />
+        </div>
+    </RadioGroup>
 </template>
 
 <script setup>
+import { ref } from 'vue'
+import { RadioGroup, RadioGroupDescription, RadioGroupLabel, RadioGroupOption } from '@headlessui/vue'
 
+const settings = [
+    { name: 'Je suis CrossFiteur 💪', description: 'Je suis pratiquant de CrossFit dans une box affiliée ou du cross training' },
+    { name: 'Je suis gérant ou coach 💼', description: 'Je suis gérant ou coach d\'une box et je souhaite découvrir Arvy' },
+]
+
+const selected = ref(settings[0])
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
