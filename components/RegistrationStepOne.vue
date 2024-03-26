@@ -24,7 +24,7 @@
                     </div>
                 </RadioGroupOption>
             </div>
-            <Button class="w-full" name="Continuer" color="violet" @click="clickBtnNext()" />
+            <AppButton class="w-full" name="Continuer" color="violet" @click="clickBtnNext()" />
         </div>
     </RadioGroup>
 </template>

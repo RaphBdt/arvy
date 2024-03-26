@@ -271,19 +271,23 @@ getUser();
 
 async function getUser() {
   let token = localStorage.getItem("token");
-  await useFetch('https://main-bvxea6i-axul4nh3q5odm.fr-3.platformsh.site/api/profile', {
-    method: 'get',
-    headers: {
-        "Authorization": `Bearer ${token}`,
-    },
-    onResponse({ response }) {
-      if(response.status != 200) {
-        navigateTo('/connexion')
-      } else {
-        isUserLoggedIn.value = true
+  if (token != null) {
+    await useFetch('https://main-bvxea6i-axul4nh3q5odm.fr-3.platformsh.site/api/profile', {
+      method: 'get',
+      headers: {
+          "Authorization": `Bearer ${token}`,
+      },
+      onResponse({ response }) {
+        if(response.status != 200) {
+          navigateTo('/connexion')
+        } else {
+          isUserLoggedIn.value = true
+        }
       }
-    }
-  })
+    })
+  } else {
+    navigateTo('/connexion');
+  }
 }
 
 </script>
