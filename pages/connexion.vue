@@ -113,7 +113,7 @@ async function clickAuth() {
   }
 
   if (login.value && password.value) {
-    await useFetch('https://main-bvxea6i-axul4nh3q5odm.fr-3.platformsh.site/api/login', {
+    await useFetch('https://developpe-klnc5za-axul4nh3q5odm.fr-3.platformsh.site/api/login', {
     method: 'post',
     headers: {
       "Content-Type": "application/json",

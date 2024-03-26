@@ -76,7 +76,7 @@ async function clickBtnNext() {
             "password": password.value
         }
 
-        await useFetch('https://main-bvxea6i-axul4nh3q5odm.fr-3.platformsh.site/api/register', {
+        await useFetch('https://developpe-klnc5za-axul4nh3q5odm.fr-3.platformsh.site/api/register', {
             method: 'post',
             headers: {
                 "Content-Type": "application/json",
