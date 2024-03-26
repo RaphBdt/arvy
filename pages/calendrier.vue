@@ -275,6 +275,153 @@
                 <p class="text-blue-500 group-hover:text-blue-700"><time datetime="2022-01-12T06:00">19h</time></p>
               </a>
             </li>
+
+            <!-- Wednesday -->
+            <li class="relative mt-px flex sm:col-start-3" style="grid-row: 2 / span 18">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-blue-50 p-2 text-xs leading-5 hover:bg-blue-100">
+                <p class="order-1 font-semibold text-blue-700">WOD</p>
+                <p class="text-blue-500 group-hover:text-blue-700"><time datetime="2022-01-12T06:00">6h</time></p>
+              </a>
+            </li>
+            <li class="relative mt-px flex sm:col-start-3" style="grid-row: 20 / span 18">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-blue-50 p-2 text-xs leading-5 hover:bg-blue-100">
+                <p class="order-1 font-semibold text-blue-700">WOD</p>
+                <p class="text-blue-500 group-hover:text-blue-700"><time datetime="2022-01-12T06:00">7h</time></p>
+              </a>
+            </li>
+            <li class="relative mt-px flex sm:col-start-3" style="grid-row: 74 / span 18">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-blue-50 p-2 text-xs leading-5 hover:bg-blue-100">
+                <p class="order-1 font-semibold text-blue-700">WOD</p>
+                <p class="text-blue-500 group-hover:text-blue-700"><time datetime="2022-01-12T06:00">10h</time></p>
+              </a>
+            </li>
+            <li class="relative mt-px flex sm:col-start-3" style="grid-row: 110 / span 18">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-blue-50 p-2 text-xs leading-5 hover:bg-blue-100">
+                <p class="order-1 font-semibold text-blue-700">WOD</p>
+                <p class="text-blue-500 group-hover:text-blue-700"><time datetime="2022-01-12T06:00">12h</time></p>
+              </a>
+            </li>
+            <li class="relative mt-px flex sm:col-start-3" style="grid-row: 182 / span 27">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-pink-50 p-2 text-xs leading-5 hover:bg-pink-100">
+                <p class="order-1 font-semibold text-pink-700">WOD Team</p>
+                <p class="text-pink-500 group-hover:text-pink-700"><time datetime="2022-01-12T07:30">16h</time></p>
+              </a>
+            </li>
+            <li class="relative mt-px flex sm:col-start-3" style="grid-row: 218 / span 18">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-blue-50 p-2 text-xs leading-5 hover:bg-blue-100">
+                <p class="order-1 font-semibold text-blue-700">WOD</p>
+                <p class="text-blue-500 group-hover:text-blue-700"><time datetime="2022-01-12T06:00">18h</time></p>
+              </a>
+            </li>
+            <li class="relative mt-px flex sm:col-start-3" style="grid-row: 236 / span 18">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-blue-50 p-2 text-xs leading-5 hover:bg-blue-100">
+                <p class="order-1 font-semibold text-blue-700">WOD</p>
+                <p class="text-blue-500 group-hover:text-blue-700"><time datetime="2022-01-12T06:00">19h</time></p>
+              </a>
+            </li>
+
+            <!-- Thursday -->
+            <li class="relative mt-px flex sm:col-start-4" style="grid-row: 20 / span 18">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-blue-50 p-2 text-xs leading-5 hover:bg-blue-100">
+                <p class="order-1 font-semibold text-blue-700">WOD</p>
+                <p class="text-blue-500 group-hover:text-blue-700"><time datetime="2022-01-12T06:00">7h</time></p>
+              </a>
+            </li>
+            <li class="relative mt-px hidden sm:col-start-4 sm:flex" style="grid-row: 47 / span 18">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-gray-100 p-2 text-xs leading-5 hover:bg-gray-200">
+                <p class="order-1 font-semibold text-gray-700">Renfo gym</p>
+                <p class="text-gray-500 group-hover:text-gray-700"><time datetime="2022-01-15T10:00">8h30</time></p>
+              </a>
+            </li>
+            <li class="relative mt-px flex sm:col-start-4" style="grid-row: 74 / span 18">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-blue-50 p-2 text-xs leading-5 hover:bg-blue-100">
+                <p class="order-1 font-semibold text-blue-700">WOD</p>
+                <p class="text-blue-500 group-hover:text-blue-700"><time datetime="2022-01-12T06:00">10h</time></p>
+              </a>
+            </li>
+            <li class="relative mt-px flex sm:col-start-4" style="grid-row: 110 / span 18">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-blue-50 p-2 text-xs leading-5 hover:bg-blue-100">
+                <p class="order-1 font-semibold text-blue-700">WOD</p>
+                <p class="text-blue-500 group-hover:text-blue-700"><time datetime="2022-01-12T06:00">12h</time></p>
+              </a>
+            </li>
+            <li class="relative mt-px flex sm:col-start-4" style="grid-row: 182 / span 27">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-pink-50 p-2 text-xs leading-5 hover:bg-pink-100">
+                <p class="order-1 font-semibold text-pink-700">WOD Team</p>
+                <p class="text-pink-500 group-hover:text-pink-700"><time datetime="2022-01-12T07:30">16h</time></p>
+              </a>
+            </li>
+            <li class="relative mt-px flex sm:col-start-4" style="grid-row: 218 / span 18">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-blue-50 p-2 text-xs leading-5 hover:bg-blue-100">
+                <p class="order-1 font-semibold text-blue-700">WOD</p>
+                <p class="text-blue-500 group-hover:text-blue-700"><time datetime="2022-01-12T06:00">18h</time></p>
+              </a>
+            </li>
+            <li class="relative mt-px flex sm:col-start-4" style="grid-row: 236 / span 18">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-blue-50 p-2 text-xs leading-5 hover:bg-blue-100">
+                <p class="order-1 font-semibold text-blue-700">WOD</p>
+                <p class="text-blue-500 group-hover:text-blue-700"><time datetime="2022-01-12T06:00">19h</time></p>
+              </a>
+            </li>
+
+            <!-- Friday -->
+            <li class="relative mt-px flex sm:col-start-5" style="grid-row: 2 / span 18">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-blue-50 p-2 text-xs leading-5 hover:bg-blue-100">
+                <p class="order-1 font-semibold text-blue-700">WOD</p>
+                <p class="text-blue-500 group-hover:text-blue-700"><time datetime="2022-01-12T06:00">6h</time></p>
+              </a>
+            </li>
+            <li class="relative mt-px flex sm:col-start-5" style="grid-row: 20 / span 18">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-blue-50 p-2 text-xs leading-5 hover:bg-blue-100">
+                <p class="order-1 font-semibold text-blue-700">WOD</p>
+                <p class="text-blue-500 group-hover:text-blue-700"><time datetime="2022-01-12T06:00">7h</time></p>
+              </a>
+            </li>
+            <li class="relative mt-px flex sm:col-start-5" style="grid-row: 74 / span 18">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-blue-50 p-2 text-xs leading-5 hover:bg-blue-100">
+                <p class="order-1 font-semibold text-blue-700">WOD</p>
+                <p class="text-blue-500 group-hover:text-blue-700"><time datetime="2022-01-12T06:00">10h</time></p>
+              </a>
+            </li>
+            <li class="relative mt-px flex sm:col-start-5" style="grid-row: 110 / span 18">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-blue-50 p-2 text-xs leading-5 hover:bg-blue-100">
+                <p class="order-1 font-semibold text-blue-700">WOD</p>
+                <p class="text-blue-500 group-hover:text-blue-700"><time datetime="2022-01-12T06:00">12h</time></p>
+              </a>
+            </li>
+            <li class="relative mt-px flex sm:col-start-5" style="grid-row: 182 / span 27">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-pink-50 p-2 text-xs leading-5 hover:bg-pink-100">
+                <p class="order-1 font-semibold text-pink-700">WOD Team</p>
+                <p class="text-pink-500 group-hover:text-pink-700"><time datetime="2022-01-12T07:30">16h</time></p>
+              </a>
+            </li>
+            <li class="relative mt-px flex sm:col-start-5" style="grid-row: 218 / span 18">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-blue-50 p-2 text-xs leading-5 hover:bg-blue-100">
+                <p class="order-1 font-semibold text-blue-700">WOD</p>
+                <p class="text-blue-500 group-hover:text-blue-700"><time datetime="2022-01-12T06:00">18h</time></p>
+              </a>
+            </li>
+            <li class="relative mt-px flex sm:col-start-5" style="grid-row: 236 / span 18">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-blue-50 p-2 text-xs leading-5 hover:bg-blue-100">
+                <p class="order-1 font-semibold text-blue-700">WOD</p>
+                <p class="text-blue-500 group-hover:text-blue-700"><time datetime="2022-01-12T06:00">19h</time></p>
+              </a>
+            </li>
+
+            <!-- Saturday -->
+            <li class="relative mt-px flex sm:col-start-6" style="grid-row: 20 / span 27">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-pink-50 p-2 text-xs leading-5 hover:bg-pink-100">
+                <p class="order-1 font-semibold text-pink-700">WOD Team</p>
+                <p class="text-pink-500 group-hover:text-pink-700"><time datetime="2022-01-12T07:30">7h</time></p>
+              </a>
+            </li>
+
+            <li class="relative mt-px flex sm:col-start-6" style="grid-row: 56 / span 27">
+              <a href="#" class="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-pink-50 p-2 text-xs leading-5 hover:bg-pink-100">
+                <p class="order-1 font-semibold text-pink-700">WOD Team</p>
+                <p class="text-pink-500 group-hover:text-pink-700"><time datetime="2022-01-12T07:30">9h</time></p>
+              </a>
+            </li>
           </ol>
         </div>
       </div>
