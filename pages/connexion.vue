@@ -120,7 +120,6 @@ async function clickAuth() {
     },
     body: authInformation,
     onResponse({ response }) {
-        console.log(response.status)
         if (response.status === 200) {
           localStorage.setItem("token", response._data.token);
           errorMessage.value = null
