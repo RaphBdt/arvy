@@ -1,17 +1,25 @@
 <template>
     <div class="bg-slate-100 p-4 border border-slate-200 rounded-lg">
-        <WodExercise :exercises="exercises" />
-        <div class="w-full flex justify-center">
-          <img src="/icons/connection.svg" alt="connextion" class="h-10">
+        <div v-for="n in numberOfExercise">
+          <WodExercise :exercises="exercises" />
+          <div class="w-full flex justify-center">
+            <img src="/icons/connection.svg" alt="connextion" class="h-10">
+          </div>
         </div>
         <div class="bg-white p-1 border border-slate-200 rounded-lg">
-          <AppButton name="Ajouter un exercice" color="violet" class="w-full" />
+          <AppButton @click="addExercise()" name="Ajouter un exercice" color="violet" class="w-full" />
         </div>
     </div>
 </template>
 
 <script setup>
 const { exercises } = defineProps(["exercises"])
+
+let numberOfExercise = ref(1);
+
+function addExercise() {
+  numberOfExercise.value++;
+}
 </script>
 
 <style scoped>
