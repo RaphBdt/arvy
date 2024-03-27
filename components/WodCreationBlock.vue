@@ -1,19 +1,19 @@
 <template>
-    <div class="bg-white">
-        <input type="text" class="text-body text-neutral-400 hover:text-violet-500 flex border-rounded" placeholder="Ajouter un exercice">
+    <div class="bg-slate-100 p-4 border border-slate-200 rounded-lg">
+        <WodExercise :exercises="exercises" />
+        <div class="w-full flex justify-center">
+          <img src="/icons/connection.svg" alt="connextion" class="h-10">
+        </div>
+        <div class="bg-white p-1 border border-slate-200 rounded-lg">
+          <AppButton name="Ajouter un exercice" color="violet" class="w-full" />
+        </div>
     </div>
 </template>
 
 <script setup>
-
+const { exercises } = defineProps(["exercises"])
 </script>
 
 <style scoped>
-input {
-  background-image: url('/icons/plus-icon.svg');
-  background-size: 20px;
-  background-position: 10px center;
-  background-repeat: no-repeat;
-  padding-left: 40px;
-}
+
 </style>
