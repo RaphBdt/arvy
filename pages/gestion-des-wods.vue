@@ -37,7 +37,7 @@ definePageMeta({
 
 let token = localStorage.getItem("token");
 if (token != null) {
-    useFetch('https://developpe-klnc5za-axul4nh3q5odm.fr-3.platformsh.site/api/wod', {
+    useFetch('https://developpe-klnc5za-axul4nh3q5odm.fr-3.platformsh.site/api/profile/wod', {
         method: 'get',
         headers: {
             "Authorization": `Bearer ${token}`,
