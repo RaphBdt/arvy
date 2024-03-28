@@ -33,7 +33,16 @@ let wod = ref({
             time: null,
             break: false,
             childBlocks:[],
-            blockExercises: [],
+            blockExercises: [
+                {
+                    exercise: null,
+                    weight: null,
+                    rehearsals: null,
+                    time: null,
+                    advise: null,
+                    orderPosition: 0,
+                }
+            ],
             blockResults: [],
             orderPosition: 0
         }
@@ -55,7 +64,16 @@ function addExercisesBlock() {
         time: null,
         break: false,
         childBlocks:[],
-        blockExercises: [],
+        blockExercises: [
+            {
+                exercise: null,
+                weight: null,
+                rehearsals: null,
+                time: null,
+                advise: null,
+                orderPosition: 0,
+            }
+        ],
         blockResults: [],
         orderPosition: wod.value.blocks.slice(-1)[0].orderPosition + 1
     };

@@ -55,7 +55,7 @@ import {
     ComboboxOptions,
 } from '@headlessui/vue'
 
-const { exercises, orderPosition } = defineProps(["exercises", "orderPosition"])
+const { exercises, blockExercise } = defineProps(["exercises", "blockExercise"])
 
 const emit = defineEmits(['updateBlock'])
 
@@ -63,7 +63,7 @@ const exercisesGoodFormat = exercises.map(({ id, name }) => ({ id, name }));
 
 const query = ref('')
 
-const selectedExercise = ref(null)
+const selectedExercise = ref()
 watch(selectedExercise, () => {
     updateExercise()
 })
@@ -79,6 +79,12 @@ const filteredExercises = computed(() =>
 let reps = defineModel('reps')
 let weight = defineModel('weight')
 
+if (blockExercise.exercise) {
+    selectedExercise.value = blockExercise.exercise
+    reps.value = blockExercise.rehearsals
+    weight.value = blockExercise.weight
+}
+
 function updateExercise() {
     if(selectedExercise.value) {
         emit('updateBlock', {
@@ -87,7 +93,7 @@ function updateExercise() {
           rehearsals: reps.value,
           time: null,
           advise: null,
-          orderPosition: orderPosition,
+          orderPosition: blockExercise.orderPosition,
         })
     }
 }

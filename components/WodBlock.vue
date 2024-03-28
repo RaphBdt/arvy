@@ -2,8 +2,8 @@
   <div v-if="!block.break" class="flex items-center">
     <div class="flex flex-col items-center">
       <div class="bg-slate-50 p-3 border border-slate-200 rounded-lg w-80">
-        <div v-for="n in blockExercises">
-          <WodExercise @update-block="updateBlock" :exercises="exercises" :orderPosition="n.orderPosition" />
+        <div v-for="blockExercise in blockExercises">
+          <WodExercise @update-block="updateBlock" :exercises="exercises" :blockExercise="blockExercise" />
           <div class="w-full flex justify-center">
             <img src="/icons/connection.svg" alt="connextion" class="h-10">
           </div>
@@ -52,6 +52,13 @@ const showRounds = ref(false)
 let blockTime = defineModel('blockTime')
 let rounds = defineModel('rounds')
 
+if (block.time) {
+    blockTime.value = block.time
+}
+
+if (block.rehearsals) {
+  rounds.value = block.rehearsals
+}
 
 function toggleBlockTime() {
   showBlockTime.value = !showBlockTime.value;
@@ -61,16 +68,7 @@ function toggleRounds() {
   showRounds.value = !showRounds.value;
 }
 
-let blockExercises = ref([
-  {
-    exercise: null,
-    weight: null,
-    rehearsals: null,
-    time: null,
-    advise: null,
-    orderPosition: 0,
-  }
-]);
+let blockExercises = ref(block.blockExercises)
 
 function addExercise() {
   let newExercise = {
