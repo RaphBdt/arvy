@@ -106,6 +106,27 @@ const password = defineModel('password')
 let token = ref(null)
 let errorMessage = ref(null)
 
+getUser();
+
+function getUser() {
+  if (process.client) {
+    let token = localStorage.getItem("token");
+    if (token != null) {
+      useFetch('https://developpe-klnc5za-axul4nh3q5odm.fr-3.platformsh.site/api/profile', {
+        method: 'get',
+        headers: {
+            "Authorization": `Bearer ${token}`,
+        },
+        onResponse({ response }) {
+          if(response.status === 200) {
+            navigateTo('/tableau-de-bord')
+          }
+        }
+      })
+    }
+  }
+}
+
 async function clickAuth() {
   const authInformation = {
     "email": login.value,
@@ -131,27 +152,6 @@ async function clickAuth() {
     })
   } else {
     errorMessage.value = "Merci de renseigner vos identifiants."
-  }
-}
-
-getUser();
-
-function getUser() {
-  if (process.client) {
-    let token = localStorage.getItem("token");
-    if (token != null) {
-      useFetch('https://developpe-klnc5za-axul4nh3q5odm.fr-3.platformsh.site/api/profile', {
-        method: 'get',
-        headers: {
-            "Authorization": `Bearer ${token}`,
-        },
-        onResponse({ response }) {
-          if(response.status === 200) {
-            navigateTo('/tableau-de-bord')
-          }
-        }
-      })
-    }
   }
 }
 
