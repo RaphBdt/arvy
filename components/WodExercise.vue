@@ -30,12 +30,12 @@
         </Combobox>
         <div class="flex w-full">
             <div class="mt-2 w-1/2 mr-1">
-                <input type="number" name="reps" id="reps"
+                <input @change="updateExercise" v-model="reps" type="number" name="reps" id="reps"
                     class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-600 sm:text-sm sm:leading-6"
                     placeholder="10 Réps'" />
             </div>
             <div class="mt-2 w-1/2 ml-1">
-                <input type="number" name="weight" id="weight"
+                <input @change="updateExercise" v-model="weight" type="number" name="weight" id="weight"
                     class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-600 sm:text-sm sm:leading-6"
                     placeholder="Poids" />
             </div>
@@ -55,12 +55,19 @@ import {
     ComboboxOptions,
 } from '@headlessui/vue'
 
-const { exercises } = defineProps(["exercises"])
+const { exercises, orderPosition } = defineProps(["exercises", "orderPosition"])
+
+const emit = defineEmits(['updateBlock'])
 
 const exercisesGoodFormat = exercises.map(({ id, name }) => ({ id, name }));
 
 const query = ref('')
+
 const selectedExercise = ref(null)
+watch(selectedExercise, () => {
+    updateExercise()
+})
+
 const filteredExercises = computed(() =>
     query.value === ''
         ? exercisesGoodFormat
@@ -68,4 +75,20 @@ const filteredExercises = computed(() =>
             return exercise.name.toLowerCase().includes(query.value.toLowerCase())
         })
 )
+
+let reps = defineModel('reps')
+let weight = defineModel('weight')
+
+function updateExercise() {
+    if(selectedExercise.value) {
+        emit('updateBlock', {
+          exercise: selectedExercise.value.id,
+          weight: weight.value,
+          rehearsals: reps.value,
+          time: null,
+          advise: null,
+          orderPosition: orderPosition,
+        })
+    }
+}
 </script>

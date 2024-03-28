@@ -8,9 +8,9 @@
                 <ul role="list" class="flex gap-x-3 gap-y-1 whitespace-nowrap lg:flex-col">
                     <li v-for="item in secondaryNavigation" :key="item.name">
                         <a :href="item.href" @click="clickOnMenuPage(item.name)"
-                            :class="[item.current ? 'bg-gray-50 text-indigo-600' : 'text-gray-700 hover:text-indigo-600 hover:bg-gray-50', 'group flex gap-x-3 rounded-md py-2 pl-2 pr-3 text-sm leading-6 font-semibold']">
+                            :class="[item.current ? 'bg-gray-50 text-violet-600' : 'text-gray-700 hover:text-violet-600 hover:bg-gray-50', 'group flex gap-x-3 rounded-md py-2 pl-2 pr-3 text-sm leading-6 font-semibold']">
                             <component :is="item.icon"
-                                :class="[item.current ? 'text-indigo-600' : 'text-gray-400 group-hover:text-indigo-600', 'h-6 w-6 shrink-0']"
+                                :class="[item.current ? 'text-violet-600' : 'text-gray-400 group-hover:text-violet-600', 'h-6 w-6 shrink-0']"
                                 aria-hidden="true" />
                             {{ item.name }}
                         </a>
@@ -31,7 +31,7 @@
                             <dd class="mt-1 flex justify-between gap-x-6 sm:mt-0 sm:flex-auto">
                                 <div class="text-gray-900">Tom Cook</div>
                                 <button type="button"
-                                    class="font-semibold text-indigo-600 hover:text-indigo-500">Mise à jour</button>
+                                    class="font-semibold text-violet-600 hover:text-violet-500">Mise à jour</button>
                             </dd>
                         </div>
                         <div class="pt-6 sm:flex">
@@ -39,7 +39,7 @@
                             <dd class="mt-1 flex justify-between gap-x-6 sm:mt-0 sm:flex-auto">
                                 <div class="text-gray-900">tom.cook@example.com</div>
                                 <button type="button"
-                                    class="font-semibold text-indigo-600 hover:text-indigo-500">Mise à jour</button>
+                                    class="font-semibold text-violet-600 hover:text-violet-500">Mise à jour</button>
                             </dd>
                         </div>
                         <div class="pt-6 sm:flex">
@@ -47,7 +47,7 @@
                             <dd class="mt-1 flex justify-between gap-x-6 sm:mt-0 sm:flex-auto">
                                 <div class="text-gray-900">Gérant de box affiliée CrossFit</div>
                                 <button type="button"
-                                    class="font-semibold text-indigo-600 hover:text-indigo-500">Mise à jour</button>
+                                    class="font-semibold text-violet-600 hover:text-violet-500">Mise à jour</button>
                             </dd>
                         </div>
                     </dl>
@@ -61,18 +61,18 @@
                         <li class="flex justify-between gap-x-6 py-6">
                             <div class="font-medium text-gray-900">CA des Savoie</div>
                             <button type="button"
-                                class="font-semibold text-indigo-600 hover:text-indigo-500">Mise à jour</button>
+                                class="font-semibold text-violet-600 hover:text-violet-500">Mise à jour</button>
                         </li>
                         <li class="flex justify-between gap-x-6 py-6">
                             <div class="font-medium text-gray-900">BNB Paribas</div>
                             <button type="button"
-                                class="font-semibold text-indigo-600 hover:text-indigo-500">Mise à jour</button>
+                                class="font-semibold text-violet-600 hover:text-violet-500">Mise à jour</button>
                         </li>
                     </ul>
 
                     <div class="flex border-t border-gray-100 pt-6">
                         <button type="button"
-                            class="text-sm font-semibold leading-6 text-indigo-600 hover:text-indigo-500"><span
+                            class="text-sm font-semibold leading-6 text-violet-600 hover:text-violet-500"><span
                                 aria-hidden="true">+</span> Ajouter une nouvelle banque</button>
                     </div>
                 </div>
@@ -85,13 +85,13 @@
                         <li class="flex justify-between gap-x-6 py-6">
                             <div class="font-medium text-gray-900">Google Calendar</div>
                             <button type="button"
-                                class="font-semibold text-indigo-600 hover:text-indigo-500">Mise à jour</button>
+                                class="font-semibold text-violet-600 hover:text-violet-500">Mise à jour</button>
                         </li>
                     </ul>
 
                     <div class="flex border-t border-gray-100 pt-6">
                         <button type="button"
-                            class="text-sm font-semibold leading-6 text-indigo-600 hover:text-indigo-500"><span
+                            class="text-sm font-semibold leading-6 text-violet-600 hover:text-violet-500"><span
                                 aria-hidden="true">+</span> Ajouter une nouvelle application</button>
                     </div>
                 </div>
@@ -106,7 +106,7 @@
                             <dd class="mt-1 flex justify-between gap-x-6 sm:mt-0 sm:flex-auto">
                                 <div class="text-gray-900">Anglais</div>
                                 <button type="button"
-                                    class="font-semibold text-indigo-600 hover:text-indigo-500">Mise à jour</button>
+                                    class="font-semibold text-violet-600 hover:text-violet-500">Mise à jour</button>
                             </dd>
                         </div>
                         <div class="pt-6 sm:flex">
@@ -114,7 +114,7 @@
                             <dd class="mt-1 flex justify-between gap-x-6 sm:mt-0 sm:flex-auto">
                                 <div class="text-gray-900">DD-MM-YYYY</div>
                                 <button type="button"
-                                    class="font-semibold text-indigo-600 hover:text-indigo-500">Mise à jour</button>
+                                    class="font-semibold text-violet-600 hover:text-violet-500">Mise à jour</button>
                             </dd>
                         </div>
                         <SwitchGroup as="div" class="flex pt-6">
@@ -122,7 +122,7 @@
                                 Heure basée en fonction de votre localisation</SwitchLabel>
                             <dd class="flex flex-auto items-center justify-end">
                                 <Switch v-model="automaticTimezoneEnabled"
-                                    :class="[automaticTimezoneEnabled ? 'bg-indigo-600' : 'bg-gray-200', 'flex w-8 cursor-pointer rounded-full p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600']">
+                                    :class="[automaticTimezoneEnabled ? 'bg-violet-600' : 'bg-gray-200', 'flex w-8 cursor-pointer rounded-full p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600']">
                                     <span aria-hidden="true"
                                         :class="[automaticTimezoneEnabled ? 'translate-x-3.5' : 'translate-x-0', 'h-4 w-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out']" />
                                 </Switch>
