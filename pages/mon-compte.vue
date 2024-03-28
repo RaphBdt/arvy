@@ -29,7 +29,7 @@
                         <div class="pt-6 sm:flex">
                             <dt class="font-medium text-gray-900 sm:w-64 sm:flex-none sm:pr-6">Nom</dt>
                             <dd class="mt-1 flex justify-between gap-x-6 sm:mt-0 sm:flex-auto">
-                                <div class="text-gray-900">Tom Cook</div>
+                                <div v-if="currentUser.firstName && currentUser.lastName" class="text-gray-900">{{ currentUser.firstName }} {{ currentUser.lastName }}</div>
                                 <button type="button"
                                     class="font-semibold text-violet-600 hover:text-violet-500">Mise à jour</button>
                             </dd>
@@ -37,7 +37,7 @@
                         <div class="pt-6 sm:flex">
                             <dt class="font-medium text-gray-900 sm:w-64 sm:flex-none sm:pr-6">Adresse mail</dt>
                             <dd class="mt-1 flex justify-between gap-x-6 sm:mt-0 sm:flex-auto">
-                                <div class="text-gray-900">tom.cook@example.com</div>
+                                <div v-if="currentUser.email" class="text-gray-900">{{ currentUser.email }}</div>
                                 <button type="button"
                                     class="font-semibold text-violet-600 hover:text-violet-500">Mise à jour</button>
                             </dd>
@@ -178,5 +178,29 @@ function clickOnMenuPage(itemName) {
         localStorage.removeItem('token');
         navigateTo('/connexion');
     }
+}
+
+let currentUser = ref({})
+
+let token = localStorage.getItem("token");
+if (token != null) {
+    useFetch('https://developpe-klnc5za-axul4nh3q5odm.fr-3.platformsh.site/api/profile', {
+        method: 'get',
+        headers: {
+            "Authorization": `Bearer ${token}`,
+        },
+        onResponse({ response }) {
+            if(response.status === 200) {
+                let userObject = {
+                    firstName: response._data.firstName,
+                    lastName: response._data.lastName,
+                    email: response._data.email,
+                }
+                currentUser.value = userObject;
+            }
+        }
+    })
+} else {
+    navigateTo('/connexion');
 }
 </script>
