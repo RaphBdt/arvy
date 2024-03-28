@@ -50,7 +50,7 @@
               </div>
 
               <div>
-                <AppButton @click="clickAuth" class="w-full" color="violet" name="Connexion" />
+                <PrimaryButton @click="clickAuth" class="w-full" name="Connexion" />
               </div>
             </form>
           </div>

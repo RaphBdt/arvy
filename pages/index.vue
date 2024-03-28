@@ -75,7 +75,7 @@
                         <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Enfin une app à la hauteur de vos performances</h1>
                         <p class="mt-6 text-lg leading-8 text-gray-300">Créez des modèles de WOD, enregistrez vos performances, partagez vos résultats et décrochez des trophées. Bienvenue sur votre nouvelle application de CrossFit tout-en-un. Conçue aussi bien pour les athlètes que pour les gérants de box.</p>
                         <div class="mt-10 flex items-center justify-center gap-x-6">
-                            <AppButton name="Inscription" color="violet" link="/inscription" />
+                            <PrimaryButton name="Inscription" link="/inscription" />
                             <NuxtLink to="/connexion" class="text-sm font-semibold leading-6 text-white">Connexion <span aria-hidden="true">→</span></NuxtLink>
                         </div>
                     </div>

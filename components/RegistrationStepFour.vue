@@ -26,7 +26,7 @@
                 </div>
             </dl>
         </div>
-        <AppButton class="mt-6 w-full" link="/connexion" color="violet" name="Confirmer mon compte" />
+        <PrimaryButton class="mt-6 w-full" link="/connexion" name="Confirmer mon compte" />
     </div>
 </template>
 

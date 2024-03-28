@@ -48,7 +48,7 @@
             </div>
         </div>
 
-        <AppButton @click="clickBtnNext" color="violet" class="w-full" name="Continuer" />
+        <PrimaryButton @click="clickBtnNext" class="w-full" name="Continuer" />
     </div>
 </template>
 

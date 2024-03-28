@@ -51,7 +51,7 @@
                 </div>
             </div>
         </div>
-        <AppButton @click="clickBtnNext" color="violet" title="Continuer" class="w-full" name="Continuer" />
+        <PrimaryButton @click="clickBtnNext" title="Continuer" class="w-full" name="Continuer" />
     </div>
 </template>
 
