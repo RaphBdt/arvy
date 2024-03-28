@@ -133,6 +133,28 @@ async function clickAuth() {
     errorMessage.value = "Merci de renseigner vos identifiants."
   }
 }
+
+getUser();
+
+function getUser() {
+  if (process.client) {
+    let token = localStorage.getItem("token");
+    if (token != null) {
+      useFetch('https://developpe-klnc5za-axul4nh3q5odm.fr-3.platformsh.site/api/profile', {
+        method: 'get',
+        headers: {
+            "Authorization": `Bearer ${token}`,
+        },
+        onResponse({ response }) {
+          if(response.status === 200) {
+            navigateTo('/tableau-de-bord')
+          }
+        }
+      })
+    }
+  }
+}
+
 </script>
 
 <style scoped></style>

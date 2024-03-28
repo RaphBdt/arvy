@@ -269,22 +269,26 @@ const sidebarOpen = ref(false)
 
 getUser();
 
-async function getUser() {
-  let token = localStorage.getItem("token");
-  if (token != null) {
-    await useFetch('https://developpe-klnc5za-axul4nh3q5odm.fr-3.platformsh.site/api/profile', {
-      method: 'get',
-      headers: {
-          "Authorization": `Bearer ${token}`,
-      },
-      onResponse({ response }) {
-        if(response.status != 200) {
-          navigateTo('/connexion')
-        } else {
-          isUserLoggedIn.value = true
+function getUser() {
+  if (process.client) {
+    let token = localStorage.getItem("token");
+    if (token != null) {
+      useFetch('https://developpe-klnc5za-axul4nh3q5odm.fr-3.platformsh.site/api/profile', {
+        method: 'get',
+        headers: {
+            "Authorization": `Bearer ${token}`,
+        },
+        onResponse({ response }) {
+          if(response.status != 200) {
+            navigateTo('/connexion')
+          } else {
+            isUserLoggedIn.value = true
+          }
         }
-      }
-    })
+      })
+    } else {
+      navigateTo('/connexion');
+    }
   } else {
     navigateTo('/connexion');
   }
